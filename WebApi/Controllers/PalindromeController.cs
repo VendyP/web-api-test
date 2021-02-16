@@ -10,7 +10,8 @@ namespace WebApi.Controllers
         [HttpGet(template: "sentence")]
         public string Get([FromQuery] string input)
         {
-            var results = PalindromHelper.Get(input);
+            //var results = PalindromHelper.Get(input);
+            var results = PalindromHelper.Get2(input);
             if (results.Count > 0)
                 return string.Join(" ", results);
             else
